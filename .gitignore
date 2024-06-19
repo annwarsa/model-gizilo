@@ -2,3 +2,4 @@ bak
 deployment/backend/.env
 deployment/backend/__pycache__
 .venv
+.idx

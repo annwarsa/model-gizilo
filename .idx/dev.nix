@@ -11,6 +11,7 @@
     pkgs.python311Packages.pip
     pkgs.tree
     pkgs.libusb1
+    pkgs.git-lfs
     # pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
   ];
