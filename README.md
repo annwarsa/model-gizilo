@@ -27,7 +27,7 @@ We have to datset, one image and another one is nutrition list.
 # How to reproduce this model
 To reproduce this model you can follow this step:
 1. Download what model you cen reproduce 
-| Type      | Dataset Link                                                                                   | Model Link                                                                                             |
+| Type      | Dataset Link   | Model Link  |
 |-----------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | Nutrition | [Data](https://github.com/giziloid/model-gizilo/blob/master/models-nutrition/clean_data.csv) | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-nutrition/train_nutrition.ipynb) |
 | Image (Resnet50V2) | Link included in notebook | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-image/resnet50v2/resnet50v2.ipynb) |
@@ -36,3 +36,14 @@ To reproduce this model you can follow this step:
 3. After that you can run the kernel and run each cell.
 
 # Deployment nutrition model using docker 
+1. Clone the project
+```bash
+git clone https://github.com/annwarsa/model-gizilo.git
+
+2. Navigate to deployment folder
+```bash
+cd model-gizilo/deployment
+
+3. Run docker compose
+```bash
+docker compose up -d
