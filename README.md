@@ -39,11 +39,14 @@ To reproduce this model you can follow this step:
 1. Clone the project
 ```bash
 git clone https://github.com/annwarsa/model-gizilo.git
+```
 
 2. Navigate to deployment folder
 ```bash
 cd model-gizilo/deployment
+```
 
 3. Run docker compose
 ```bash
 docker compose up -d
+```
