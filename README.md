@@ -56,6 +56,9 @@ cd model-gizilo/deployment
 ```bash
 docker compose up -d
 ```
+**NOTE:**
+If the model cannot be loaded, you can try saving it again in a virtual machine, which will be deployed, so it will have the same environment.
+
 The api will be at localhost:8080/api/v1/nutrient. To test and get the result you can use rest api tools such as postman or equivalent, and following this:
  - Endpoint: localhost:8080/api/v1/nutrient
  - Method: POST

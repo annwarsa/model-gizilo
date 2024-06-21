@@ -74,4 +74,4 @@ class BaseAPI:
         
         self.app.middleware("http")(log_request)
 
-app = BaseAPI().app
+base_api = BaseAPI()
