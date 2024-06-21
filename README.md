@@ -6,8 +6,10 @@ We pre trained models and do fine tune transfer learning. We also try build from
 
 | Model       | Accuracy | Val Accuracy |
 |-------------|----------|--------------|
-| InceptionV3 | ??       | ??           |
+| Scratch     | 0.74     | 0.26         |
+| InceptionV3 | 0.84     | 0.75         |
 | Resnet50V2  | 1.00     | 0.63         |
+| MobileNetV2 | 0.96     | 0.67         |
 
 
 # Models Nutrition 
@@ -15,7 +17,7 @@ We trained nutrition models from scratch without help pre trained models.
 
 | Model       | Accuracy | Val Accuracy |
 |-------------|----------|--------------|
-| Model       | 0.97     | 0.99         |
+| Model       | 0.99     | 0.98         |
 
 # Dataset
 We have to datset, one image and another one is nutrition list.
@@ -27,8 +29,9 @@ We have to datset, one image and another one is nutrition list.
 # How to reproduce this model
 To reproduce this model you can follow this step:
 1. Download what model you cen reproduce 
+
 | Type      | Dataset Link   | Model Link  |
-|-----------|------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
+|-----------|----------------|-------------|
 | Nutrition | [Data](https://github.com/giziloid/model-gizilo/blob/master/models-nutrition/clean_data.csv) | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-nutrition/train_nutrition.ipynb) |
 | Image (Resnet50V2) | Link included in notebook | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-image/resnet50v2/resnet50v2.ipynb) |
 
@@ -50,3 +53,20 @@ cd model-gizilo/deployment
 ```bash
 docker compose up -d
 ```
+The api will be at localhost:8080/api/v1/nutrient. To test and get the result you can use rest api tools such as postman or equivalent, and following this:
+ - Endpoint: localhost:8080/api/v1/nutrient
+ - Method: POST
+ - Payload:
+    ```json
+    {
+        "fat": 1,
+        "sugar": 1,
+        "sodium": 1
+    }
+    ```
+ - Response:
+    ```json
+    {
+        "result": "A"
+    }
+    ```
