@@ -33,7 +33,10 @@ To reproduce this model you can follow this step:
 | Type      | Dataset Link   | Model Link  |
 |-----------|----------------|-------------|
 | Nutrition | [Data](https://github.com/giziloid/model-gizilo/blob/master/models-nutrition/clean_data.csv) | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-nutrition/train_nutrition.ipynb) |
+| Image (scratch) | Link included in notebook | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-image/model_scratch/model_scratch.ipynb) |
+| Image (InceptionV3) | Link included in notebook | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-image/inceptionv3/train%2Bmetadata_inceptionv3.ipynb) |
 | Image (Resnet50V2) | Link included in notebook | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-image/resnet50v2/resnet50v2.ipynb) |
+| Image (MobileNetV2) | Link included in notebook | [Train Notebook](https://github.com/giziloid/model-gizilo/blob/master/models-image/mobilenetv2/mobilenetv2.ipynb) |
 
 2. Now after download the notebook and dataset you upload the notebook and dataset to use Kagggle or Google Collab for free resource training.
 3. After that you can run the kernel and run each cell.
