@@ -14,12 +14,24 @@ import logging
 logger = logging.getLogger(__name__)
     
 def init_model():
-    le = LabelEncoder()
-    df = pd.read_csv('clean_data.csv')
-    le.fit(df['grade'])
-    model = tf.keras.models.load_model("nutrient.h5")
+    try:
+        le = LabelEncoder()
+        df = pd.read_csv('clean_data.csv')
+        le.fit(df['grade'])
+    except FileNotFoundError:
+        raise RuntimeError("clean_data.csv not found. Ensure the file is present in the expected directory.")
+    except Exception as e:
+        raise RuntimeError(f"Error loading clean_data.csv: {str(e)}")
+    
+    try:
+        model = tf.keras.models.load_model("nutrient.h5")
+    except FileNotFoundError:
+        raise RuntimeError("nutrient.h5 not found. Ensure the file is present in the expected directory.")
+    except Exception as e:
+        raise RuntimeError(f"Error loading nutrient.h5: {str(e)}")
     
     return le, model
+
 
 class BaseAPI:
     def __init__(self):
